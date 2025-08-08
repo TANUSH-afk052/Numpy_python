@@ -118,6 +118,24 @@ np.random.randn(3, 3)
 # Seed random number generator (for reproducibility)
 np.random.seed(42)
 ```
+## Useful Tips
+
+* Use `np.copy()` to make a copy of an array.
+* Use `np.concatenate()` to join arrays.
+* Use `np.where()` for conditional selection.
+
+---
+
+## References
+
+* [NumPy Documentation](https://numpy.org/doc/)
+* [W3Schools NumPy Tutorial](https://www.w3schools.com/python/numpy_intro.asp)
+
+---
+
+*End of Cheat Sheet*
+
+---
 
 ---
 
