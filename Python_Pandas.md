@@ -104,3 +104,29 @@ df.fillna(value=0, inplace=True)
 
 ---
 
+## Grouping and Aggregation
+Summarize data using groupby.
+
+```
+grouped = df.groupby('City')['Age'].mean()
+print(grouped)
+```
+
+---
+
+## Sorting Data
+Sort data by values or index.
+
+```
+sorted_df = df.sort_values(by='Age')
+print(sorted_df)
+```
+
+---
+
+## Exporting Data
+Save DataFrame to file.
+
+```
+df.to_csv('output.csv', index=False)
+```
