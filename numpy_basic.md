@@ -138,5 +138,182 @@ np.random.seed(42)
 ---
 
 ---
+***
 
+
+# NumPy Random
+
+## Random Intro
+NumPy provides random number generation via `numpy.random`, for use in simulations and analysis.
+
+```
+import numpy as np
+
+# Generate a random integer between 0 and 9
+print(np.random.randint(0, 10))
+```
+
+---
+
+## Data Distribution
+You can easily model statistical distributions and visualize them using NumPy.
+
+```
+import numpy as np
+data = np.random.choice([1,ize=(10,))[1]
+print(data)
+```
+
+---
+
+## Random Permutation
+Shuffle or permute elements using `np.random.permutation`.
+
+```
+import numpy as np
+arr = np.array([1, 2,huffled = np.random.permutation(arr)
+print(shuffled)
+```
+
+---
+
+## Seaborn Module
+Seaborn is a data visualization library that works well with random distributions.
+
+```
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = np.random.normal(0, 1, 1000)
+sns.histplot(data, kde=True)
+plt.show()
+```
+
+---
+
+## Normal Distribution
+Generate numbers from a standard normal (Gaussian) distribution.
+
+```
+import numpy as np
+data = np.random.normal(loc=0, scale=1, size=10)
+print(data)
+```
+
+---
+
+## Binomial Distribution
+Model number of successes in n trials with probability p.
+
+```
+import numpy as np
+data = np.random.binomial(n=10, p=0.5, size=10)
+print(data)
+```
+
+---
+
+## Poisson Distribution
+Number of events occurring in a fixed interval.
+
+```
+import numpy as np
+data = np.random.poisson(lam=3, size=10)
+print(data)
+```
+
+---
+
+## Uniform Distribution
+All values have equal probability.
+
+```
+import numpy as np
+data = np.random.uniform(low=0.0, high=1.0, size=10)
+print(data)
+```
+
+---
+
+## Logistic Distribution
+Similar to normal, often used in classification.
+
+```
+import numpy as np
+data = np.random.logistic(loc=0.0, scale=1.0, size=10)
+print(data)
+```
+
+---
+
+## Multinomial Distribution
+More than two outcomes per trial.
+
+```
+import numpy as np
+# 6 trials, probabilities for each event
+data = np.random.multinomial(6, [1/6.]*6, size=10)
+print(data)
+```
+
+---
+
+## Exponential Distribution
+Time between events in Poisson process.
+
+```
+import numpy as np
+data = np.random.exponential(scale=2.0, size=10)
+print(data)
+```
+
+---
+
+## Chi Square Distribution
+Used in hypothesis testing.
+
+```
+import numpy as np
+data = np.random.chisquare(df=2, size=10)
+print(data)
+```
+
+---
+
+## Rayleigh Distribution
+Often used in signal processing.
+
+```
+import numpy as np
+data = np.random.rayleigh(scale=1.0, size=10)
+print(data)
+```
+
+---
+
+## Pareto Distribution
+Used to model wealth distribution.
+
+```
+import numpy as np
+data = np.random.pareto(a=2.0, size=10)
+print(data)
+```
+
+---
+
+## Zipf Distribution
+Frequency of events follows power law.
+
+```
+import numpy as np
+data = np.random.zipf(a=2.0, size=10)
+print(data)
+```
+
+---
+##Platforms Used
+W3 School
+---
 
