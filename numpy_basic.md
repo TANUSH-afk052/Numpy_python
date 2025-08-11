@@ -1,190 +1,133 @@
 
+# 🐍 NumPy Notes (W3Schools)
+
+[![NumPy](https://img.shields.io/badge/Library-NumPy-blue?logo=python)](https://numpy.org/)
+[![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-green)]()
+[![Source](https://img.shields.io/badge/Source-W3Schools-orange)](https://www.w3schools.com/python/numpy_intro.asp)
+
+This document contains my completed **NumPy** modules from W3Schools,  
+including **Basics**, **Random**, and **ufunc (Universal Functions)**.
 
 ---
 
-````markdown
-# NumPy Basics Cheat Sheet
+## 📌 ![Basics Badge](https://img.shields.io/badge/Section-Basics-blue) NumPy Basics Cheat Sheet
 
-## Introduction
+### 🔹 Introduction
 NumPy is a popular Python library for numerical computing. It provides support for arrays, matrices, and many mathematical functions.
 
 ---
 
-## Importing NumPy
-
+### 📥 Importing NumPy
 ```python
 import numpy as np
 ````
 
 ---
 
-## Creating Arrays
+### 🛠 Creating Arrays
 
 ```python
-# 1D array
-arr = np.array([1, 2, 3, 4])
-
-# 2D array
-arr2d = np.array([[1, 2], [3, 4]])
-
-# Array of zeros
-zeros = np.zeros((3, 3))
-
-# Array of ones
-ones = np.ones((2, 4))
-
-# Array with a range of values
-range_arr = np.arange(0, 10, 2)  # from 0 to 10 step 2
-
-# Array with evenly spaced values
-linspace_arr = np.linspace(0, 1, 5)  # 5 values between 0 and 1
+arr = np.array([1, 2, 3, 4])         # 1D array
+arr2d = np.array([[1, 2], [3, 4]])   # 2D array
+zeros = np.zeros((3, 3))             # array of zeros
+ones = np.ones((2, 4))               # array of ones
+range_arr = np.arange(0, 10, 2)      # range array
+linspace_arr = np.linspace(0, 1, 5)  # evenly spaced values
 ```
 
 ---
 
-## Array Attributes
+### 📊 Array Attributes
 
 ```python
-arr.shape      # shape of array
-arr.size       # number of elements
-arr.dtype      # data type of elements
-arr.ndim       # number of dimensions
+arr.shape   # shape of array
+arr.size    # number of elements
+arr.dtype   # data type
+arr.ndim    # number of dimensions
 ```
 
 ---
 
-## Array Operations
+### ➕➖✖️➗ Array Operations
 
 ```python
-# Arithmetic operations
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
 
-a + b     # array([5, 7, 9])
-a - b     # array([-3, -3, -3])
-a * b     # array([4, 10, 18])
-a / b     # array([0.25, 0.4, 0.5])
+a + b
+a - b
+a * b
+a / b
 
-# Universal functions
-np.sqrt(a)     # square root
-np.exp(a)      # exponentiation
-np.sin(a)      # sine
+np.sqrt(a)
+np.exp(a)
+np.sin(a)
 ```
 
 ---
 
-## Indexing and Slicing
+### 🔍 Indexing and Slicing
 
 ```python
-arr = np.array([10, 20, 30, 40, 50])
-
-arr[0]       # 10
-arr[1:4]     # array([20, 30, 40])
-arr[:3]      # array([10, 20, 30])
-arr[-1]      # 50
-
-# 2D indexing
-arr2d = np.array([[1, 2, 3], [4, 5, 6]])
-arr2d[0, 2]  # 3
-arr2d[:, 1]  # array([2, 5])
+arr[0]       # first element
+arr[1:4]     # slice from index 1 to 3
+arr2d[0, 2]  # 3rd element in 1st row
+arr2d[:, 1]  # 2nd column from all rows
 ```
 
 ---
 
-## Reshaping Arrays
+### 🔄 Reshaping Arrays
 
 ```python
-arr = np.arange(1, 10)    # array([1, 2, ..., 9])
+arr = np.arange(1, 10)
 arr.reshape((3, 3))
 ```
 
 ---
 
-## Random Numbers
+### 🎲 Random Numbers
 
 ```python
-# Random float between 0 and 1
 np.random.rand()
-
-# Random array of floats
-np.random.rand(3, 2)
-
-# Random integers between low (inclusive) and high (exclusive)
 np.random.randint(1, 10, size=(3, 3))
-
-# Random samples from a normal (Gaussian) distribution
 np.random.randn(3, 3)
-
-# Seed random number generator (for reproducibility)
 np.random.seed(42)
 ```
-## Useful Tips
-
-* Use `np.copy()` to make a copy of an array.
-* Use `np.concatenate()` to join arrays.
-* Use `np.where()` for conditional selection.
 
 ---
 
-## References
+## 🎲 ![Random Badge](https://img.shields.io/badge/Section-Random-purple) NumPy Random
 
-* [NumPy Documentation](https://numpy.org/doc/)
-* [W3Schools NumPy Tutorial](https://www.w3schools.com/python/numpy_intro.asp)
+### 🎯 Random Intro
 
----
-
-*End of Cheat Sheet*
-
----
-
----
-***
-
-
-# NumPy Random
-
-## Random Intro
-NumPy provides random number generation via `numpy.random`, for use in simulations and analysis.
-
-```
-import numpy as np
-
-# Generate a random integer between 0 and 9
-print(np.random.randint(0, 10))
+```python
+np.random.randint(0, 10)
 ```
 
 ---
 
-## Data Distribution
-You can easily model statistical distributions and visualize them using NumPy.
+### 📈 Data Distribution
 
-```
-import numpy as np
-data = np.random.choice([1,ize=(10,))[1]
-print(data)
+```python
+np.random.choice([1, 2, 3], size=(10,))
 ```
 
 ---
 
-## Random Permutation
-Shuffle or permute elements using `np.random.permutation`.
+### 🔄 Random Permutation
 
-```
-import numpy as np
-arr = np.array([1, 2,huffled = np.random.permutation(arr)
-print(shuffled)
+```python
+np.random.permutation(np.array([1, 2, 3]))
 ```
 
 ---
 
-## Seaborn Module
-Seaborn is a data visualization library that works well with random distributions.
+### 📊 Seaborn Visualization
 
-```
-import numpy as np
+```python
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 data = np.random.normal(0, 1, 1000)
 sns.histplot(data, kde=True)
 plt.show()
@@ -192,128 +135,90 @@ plt.show()
 
 ---
 
-## Normal Distribution
-Generate numbers from a standard normal (Gaussian) distribution.
+### 📉 Distributions
 
-```
-import numpy as np
-data = np.random.normal(loc=0, scale=1, size=10)
-print(data)
+* **Normal:** `np.random.normal(0, 1, 10)`
+* **Binomial:** `np.random.binomial(10, 0.5, 10)`
+* **Poisson:** `np.random.poisson(3, 10)`
+* **Uniform:** `np.random.uniform(0.0, 1.0, 10)`
+* **Logistic:** `np.random.logistic(0.0, 1.0, 10)`
+* **Multinomial:** `np.random.multinomial(6, [1/6.]*6, 10)`
+* **Exponential:** `np.random.exponential(2.0, 10)`
+* **Chi-Square:** `np.random.chisquare(2, 10)`
+* **Rayleigh:** `np.random.rayleigh(1.0, 10)`
+* **Pareto:** `np.random.pareto(2.0, 10)`
+* **Zipf:** `np.random.zipf(2.0, 10)`
+
+---
+
+## ⚡ ![Ufunc Badge](https://img.shields.io/badge/Section-ufunc-red) NumPy ufunc (Universal Functions)
+
+### 📜 ufunc Intro
+
+* Fast, element-wise operations on arrays.
+* Better performance than Python loops.
+
+---
+
+### 🛠 ufunc Create Function
+
+```python
+def myadd(x, y):
+    return x + y
+myadd = np.frompyfunc(myadd, 2, 1)
 ```
 
 ---
 
-## Binomial Distribution
-Model number of successes in n trials with probability p.
+### ➗ ufunc Simple Arithmetic
 
-```
-import numpy as np
-data = np.random.binomial(n=10, p=0.5, size=10)
-print(data)
-```
-
----
-
-## Poisson Distribution
-Number of events occurring in a fixed interval.
-
-```
-import numpy as np
-data = np.random.poisson(lam=3, size=10)
-print(data)
+```python
+np.add()
+np.subtract()
+np.multiply()
+np.divide()
 ```
 
 ---
 
-## Uniform Distribution
-All values have equal probability.
+### 🔢 ufunc Rounding Decimals
 
-```
-import numpy as np
-data = np.random.uniform(low=0.0, high=1.0, size=10)
-print(data)
-```
-
----
-
-## Logistic Distribution
-Similar to normal, often used in classification.
-
-```
-import numpy as np
-data = np.random.logistic(loc=0.0, scale=1.0, size=10)
-print(data)
+```python
+np.trunc()
+np.fix()
+np.around()
+np.floor()
+np.ceil()
 ```
 
 ---
 
-## Multinomial Distribution
-More than two outcomes per trial.
+### 📈 ufunc Logs
 
-```
-import numpy as np
-# 6 trials, probabilities for each event
-data = np.random.multinomial(6, [1/6.]*6, size=10)
-print(data)
+```python
+np.log2()
+np.log10()
+np.log()
 ```
 
 ---
 
-## Exponential Distribution
-Time between events in Poisson process.
+### ➕ ufunc Summations
 
-```
-import numpy as np
-data = np.random.exponential(scale=2.0, size=10)
-print(data)
+```python
+np.sum()
+np.cumsum()
 ```
 
 ---
 
-## Chi Square Distribution
-Used in hypothesis testing.
+### ✖️ ufunc Products
 
-```
-import numpy as np
-data = np.random.chisquare(df=2, size=10)
-print(data)
+```python
+np.prod()
+np.cumprod()
 ```
 
 ---
 
-## Rayleigh Distribution
-Often used in signal processing.
-
-```
-import numpy as np
-data = np.random.rayleigh(scale=1.0, size=10)
-print(data)
-```
-
----
-
-## Pareto Distribution
-Used to model wealth distribution.
-
-```
-import numpy as np
-data = np.random.pareto(a=2.0, size=10)
-print(data)
-```
-
----
-
-## Zipf Distribution
-Frequency of events follows power law.
-
-```
-import numpy as np
-data = np.random.zipf(a=2.0, size=10)
-print(data)
-```
-
----
-##Platforms Used
-W3 School
----
 
