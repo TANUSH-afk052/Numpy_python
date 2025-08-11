@@ -233,6 +233,5 @@ NumPy offers:
 * [W3Schools NumPy Tutorial](https://www.w3schools.com/python/numpy_intro.asp)
 * [W3Schools NumPy ufunc Tutorial](https://www.w3schools.com/python/numpy_ufunc.asp)
 
-```
 
 
