@@ -220,5 +220,19 @@ np.cumprod()
 ```
 
 ---
+## ✅ Summary
+
+NumPy offers:
+
+* Powerful array handling
+* Fast universal functions
+* Extensive statistical distributions
+
+📚 **Sources:**
+
+* [W3Schools NumPy Tutorial](https://www.w3schools.com/python/numpy_intro.asp)
+* [W3Schools NumPy ufunc Tutorial](https://www.w3schools.com/python/numpy_ufunc.asp)
+
+```
 
 
