@@ -130,3 +130,37 @@ Save DataFrame to file.
 ```
 df.to_csv('output.csv', index=False)
 ```
+# Pandas - Cleaning Data (W3Schools)
+
+I have completed the following **Cleaning Data** modules from W3Schools' Pandas tutorial.  
+This section focuses on preparing and fixing datasets before analysis.
+
+## Modules Completed
+
+### 1. Clean Data
+- Understanding the importance of data cleaning.
+- Identifying messy data and making it ready for analysis.
+
+### 2. Clean Empty Cells
+- Handling missing values using:
+  - `dropna()` to remove rows with null values.
+  - `fillna()` to replace null values with default or computed values.
+
+### 3. Clean Wrong Format
+- Converting columns to correct formats (e.g., date, numeric).
+- Using `pd.to_datetime()` and `astype()` for conversions.
+
+### 4. Clean Wrong Data
+- Identifying and fixing incorrect entries in datasets.
+- Replacing or removing invalid values.
+
+### 5. Remove Duplicates
+- Using `drop_duplicates()` to remove duplicate rows.
+- Understanding when and why duplicates should be removed.
+
+## Summary
+Cleaning data ensures better analysis, avoids misleading results, and improves model accuracy.  
+These techniques are essential for any data preprocessing workflow.
+
+---
+**Source:** [W3Schools Pandas Cleaning Data](https://www.w3schools.com/python/pandas/pandas_cleaning.asp)
